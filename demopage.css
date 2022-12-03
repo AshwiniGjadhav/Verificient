@@ -1,0 +1,134 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background: #dce5f3;
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-c {
+    flex-direction: column;
+}
+
+.flex-d {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar {
+    height: 90%;
+}
+
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: #1a3847;
+    cursor: pointer;
+    background: #f2fbff;
+    border-radius: 0px;
+    transition: background 0.4s linear;
+}
+
+.sidebar .icon {
+    margin: 8px 0;
+}
+
+.icon:hover,
+.icon:focus {
+    color: #fff;
+    background: #0fa7f5;
+}
+
+.icon-btn {
+    color: #1a3847;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Main Content */
+
+
+
+.head {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+
+.orders,
+.plans {
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0px;
+}
+
+.orders {
+    margin-bottom: 20px;
+}
+
+ 
+
+.price {
+    color: #333;
+}
+
+.order:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+
+.orders:hover,
+.plans:hover {
+    transition: 0.3s linear;
+    transform: translateY(-5px);
+}
+
+/* End Main Content */
+
+@media (max-width: 768px) {
+   
+
+   
+
+    .sidebar,
+    .sidebar > .flex-c {
+        flex-direction: row;
+    }
+  
+
+    .sidebar-center .icon:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .orders
+     {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+   
+}
+

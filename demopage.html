@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="Ashwini.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="candlechart.js"></script>
+    <script src="linechart.js"></script>
+    <script src="piechart.js"></script>
+
+</head>
+<body>
+    <!----->
+    <div class="container-fuild overflow-hidden">
+
+        <div class="row gx-5">
+            <div class="col-md-1">
+                <div class="p-3 border bg-light vh-100 sidebar-center flex flex-c">
+                    <div class="icon flex">
+                        <ion-icon name="bag-outline"></ion-icon>
+                    </div>
+                    <div class="icon flex">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="icon flex">
+                        <ion-icon name="swap-horizontal-outline"></ion-icon>
+                    </div>
+                    <div class="icon flex">
+                        <ion-icon name="reader-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row gx-5">
+                    <div class="col mt-5">
+                        <p class="p-3 border bg-light"><ion-icon name="information-circle-outline"></ion-icon>exchange not connected</p>
+                    </div>
+                </div>
+
+                <div class="row gx-5 mb-3 ">
+                    <div class="col">
+                        <div class="p-3 border bg-light">
+                            <h6>Balance</h6>
+                            <h4>$25,200.97</h4>
+                            <div class="row">
+                                <div class="col">
+                                    <p><ion-icon name="arrow-down-outline"></ion-icon>Invested</p>
+                                    <p class="price">$10,458.00</p>
+                                </div>
+                                <div class="col">
+                                    <p><ion-icon name="arrow-up-outline"></ion-icon>Profit</p>
+                                    <p class="price">+ 60%</p>
+                                </div>
+
+                                <div class="col">
+                                    <p><ion-icon name="arrow-up-outline"></ion-icon>USD Profit</p>
+                                    <p class="price">$15,648.38</p>
+                                </div>
+                            </div>
+                            <div class="row"><input type="button" id="Exchange" value="Add Exchange" /></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 border bg-light">
+                            <div id="piechart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gx-5">
+                    <div class="col">
+                        <div id="myChart" style="width:100%; max-width:300px; height:200px;"></div>
+                        <div class="p-3 border bg-light">Portfolio 1</div>
+                    </div>
+                    <div class="col">
+                        <div id="myChart1" style="width:100%; max-width:300px; height:200px;"></div>
+                        <div class="p-3 border bg-light">Portfolio 2</div>
+                    </div>
+                    <div class="col">
+                        <div id="myChart2" style="width:100%; max-width:300px; height:200px;"></div>
+                        <div class="p-3 border bg-light">Portfolio 3</div>
+                    </div>
+                </div>
+
+                <div class="row gx-5 mt-3">
+                    <div class="col-md-8">
+
+                        <div class="p-3 border bg-light graph">
+                            <div id="chartContainer" style="height: 250px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3 border bg-light">
+
+                            <h6>Transactions</h6>
+                            <div class="order flex-d">
+                                <ion-icon name="arrow-down-outline"></ion-icon>
+                                <p class="price"><b>Buy</b><br>$250.00</p>
+                                <p class="price">Apr20,2020</p>
+                            </div>
+                            <div class="order flex-d">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                <p class="price"><b>Sell</b><br>$250.00</p>
+                                <p class="price">Apr16,2020</p>
+                            </div>
+                            <div class="order flex-d">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                                <p class="price"><b>Sell</b><br>$250.00</p>
+                                <p class="price">Apr10,2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-3 border bg-light">
+                <p><ion-icon name="person-circle-outline" class="icon-btn"></ion-icon>Ashwini<br></p>
+                <p><ion-icon name="swap-vertical-outline"></ion-icon> Recent Activity</p>
+                <div style="max-width: 200px;" class="mt-3">
+                    <div class="order flex-d">
+                        <ion-icon name="arrow-down-outline"></ion-icon>
+                        <p class="price"><b>Buy</b><br>$250.00</p>
+                        <p class="price">Apr20,2020</p>
+                    </div>
+                    <div class="order flex-d">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                        <p class="price"><b>Sell</b><br>$250.00</p>
+                        <p class="price">Apr16,2020</p>
+                    </div>
+                    <div class="order flex-d">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                        <p class="price"><b>Sell</b><br>$250.00</p>
+                        <p class="price">Apr10,2020</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex mb-3">
+                    <h5><ion-icon ios="ios-refresh" md="md-refresh"></ion-icon> Exchange</h5>
+                    <div class="btn-group float-right mx-auto">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle text-white mt-0" data-toggle="dropdown" aria-expanded="false">
+                            USD
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-light">
+                    <p class="py-2 px-2" style="border: 1px solid #e4e4e4!important;"> 1700.00 USD</p>
+
+                    <h2 class="text-center mx-auto" style="margin-top: -35px; margin-bottom:-21px; background-color: #e4e4e4; border-radius:50%; width: 50px; height:50px; padding-top: 8px;"><ion-icon ios="ios-refresh" class="aligncenter" md="md-refresh"></ion-icon></h2>
+
+                    <p class="py-2 px-2" style="border: 1px solid #e4e4e4!important;"> 0.6751700 BTC</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Ion Icons Js -->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+</body>
+</html>
